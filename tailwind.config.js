@@ -16,8 +16,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Sora", "sans-serif"],
-        title: ["Arturo-Heavy", "sans-serif"],
+        sans: ["Outfit", "sans-serif"],
+        title: ["Space Grotesk", "sans-serif"],
       },
     },
   },
