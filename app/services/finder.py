@@ -11,7 +11,7 @@ class RowFinder:
         
         # On s'assure que la colonne existe
         if column not in df.columns:
-            return None
+            raise ValueError(f"Colonne '{column}' introuvable. Colonnes disponibles: {list(df.columns)}")
         
         # On normalise les données de la colonne pour la recherche (insensible à la casse)
         # On recherche une correspondance exacte (même si c'est du fuzzy search dans le futur)

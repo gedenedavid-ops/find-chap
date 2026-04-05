@@ -52,9 +52,11 @@ export default function Search() {
       } else {
         setMessage(response.data.message);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Erreur de recherche :", error);
-      setMessage("Une erreur est survenue lors de la recherche.");
+      // Afficher le message d'erreur du backend si disponible
+      const errorMessage = error.response?.data?.detail || "Une erreur est survenue lors de la recherche.";
+      setMessage(errorMessage);
     } finally {
       setIsSearching(false);
     }

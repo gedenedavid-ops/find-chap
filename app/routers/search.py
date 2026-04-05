@@ -19,7 +19,10 @@ async def search_row(request: SearchRequest):
     df = sessions[request.session_id]
     
     # 2. Effectuer la recherche
-    result = RowFinder.find(df, request.column, request.query)
+    try:
+        result = RowFinder.find(df, request.column, request.query)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
     
     if result is None:
         return {
