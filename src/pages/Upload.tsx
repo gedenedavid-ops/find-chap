@@ -68,7 +68,7 @@ export default function Upload() {
           className={`w-full h-80 flex flex-col items-center justify-center p-8 transition-all duration-500 relative overflow-hidden group glass cursor-pointer ${
             file ? 'border-brand-indigo/50 ring-4 ring-brand-indigo/5' : 'hover:border-white/20'
           }`}
-          onPointerDown={() => !isUploading && fileInputRef.current?.click()}
+          onClick={() => !isUploading && fileInputRef.current?.click()}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-brand-indigo/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           
