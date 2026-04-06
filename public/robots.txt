@@ -1,0 +1,13 @@
+# FindChap robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: *.pdf$
+Disallow: *.xlsx$
+Disallow: *.csv$
+
+# Sitemap
+Sitemap: https://findchap.koyeb.app/sitemap.xml
+
+# Crawl-delay (optional)
+Crawl-delay: 1
